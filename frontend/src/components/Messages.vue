@@ -1,20 +1,26 @@
 <template>
     <div>
-        <h1>hello world</h1>
-        <ul v-for="message in messages":key="array">
-            <li>{{message}}</li>
-        </ul>
-    </div>
+        <h4>Messages</h4>
+        <v-list>
+      
+        <v-list-item v-for="message in messages" @click="">
+            
+            <v-list-item-content>
+                <v-list-item-title v-text="message"></v-list-item-title>
+            </v-list-item-content>
+
+      </v-list-item>
+    </v-list>
+
+     </div>   
 </template>
 
 <script>
 export default {
-    // name: messages,
-    data: function() {
-        return {
-            messages: ["hello", "hi"]
-    };
-
+   data: function() {
+       return{
+           messages: ["Hello", "Hi", "Hey there"]
+       }
+   }
 }
-}
-</script>
+</script> 
